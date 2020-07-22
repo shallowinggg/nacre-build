@@ -7,12 +7,12 @@ Use it in your `pom.xml` like this:
 ```xml
     <plugin>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.1</version>
         <dependencies>
             <dependency>
                 <groupId>io.github.shallowinggg</groupId>
                 <artifactId>nacre-build</artifactId>
-                <version>1.1.0</version>
+                <version>${nacre-build.version}</version>
             </dependency>
         </dependencies>
         <executions>
@@ -42,4 +42,4 @@ There are two configs in `checkstyle` folder and `nacre-checkstyle` folder. They
 
 So, you should use general config in `checkstyle` folder for your own projects.
 
-You can also use `google check` with `google-check/checkstyle.xml` or `sun check` with `sun-check/checkstyle.xml`.
+You can also use `google check` with `google-check/checkstyle.xml` or `sun check` with `sun-check/checkstyle.xml` in version `1.2.0`.
