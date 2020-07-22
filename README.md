@@ -41,3 +41,5 @@ There are two configs in `checkstyle` folder and `nacre-checkstyle` folder. They
 ```
 
 So, you should use general config in `checkstyle` folder for your own projects.
+
+You can also use `google check` with `google-check/checkstyle.xml` or `sun check` with `sun-check/checkstyle.xml`.
