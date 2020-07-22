@@ -122,9 +122,6 @@ limitations under the License.
         <module name="MethodTypeParameterName">
             <property name="format" value="(^[A-Z][A-Z0-9]*$)"/>
         </module>
-        <module name="PackageName">
-            <property name="format" value="^io\.github\.shallowinggg(\.[a-z]+)*$"/>
-        </module>
         <module name="ParameterName"/>
         <module name="TypeName"/>
 

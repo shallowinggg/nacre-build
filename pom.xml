@@ -6,7 +6,7 @@
 
     <groupId>io.github.shallowinggg</groupId>
     <artifactId>nacre-build</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <name>Nacre Checkstyle Configuration</name>
     <url>https://github.com/shallowinggg/nacre-build</url>
