@@ -9,7 +9,7 @@ Use it in your `pom.xml` like this:
 ```xml
     <plugin>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.1</version>
         <dependencies>
             <dependency>
                 <groupId>io.github.shallowinggg</groupId>
