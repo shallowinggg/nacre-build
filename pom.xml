@@ -6,11 +6,11 @@
 
     <groupId>io.github.shallowinggg</groupId>
     <artifactId>nacre-build</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0-SNAPSHOT</version>
 
-    <name>Nacre Checkstyle Configuration</name>
+    <name>Nacre Build Configuration</name>
     <url>https://github.com/shallowinggg/nacre-build</url>
-    <description>The checkstyle config for the Nacre build</description>
+    <description>The build configs like "checkstyle", "formatter" for shallowinggg's projects.</description>
     <licenses>
         <license>
             <name>Apache License Version 2.0</name>
@@ -26,6 +26,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <versions.version>2.8.1</versions.version>
     </properties>
     <developers>
         <developer>

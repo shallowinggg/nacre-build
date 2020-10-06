@@ -1,5 +1,7 @@
 # nacre-build
 
+## check style
+
 The checkstyle config for the multiple modules project.
 
 Use it in your `pom.xml` like this:
@@ -12,7 +14,7 @@ Use it in your `pom.xml` like this:
             <dependency>
                 <groupId>io.github.shallowinggg</groupId>
                 <artifactId>nacre-build</artifactId>
-                <version>1.1.0</version>
+                <version>1.3.0</version>
             </dependency>
         </dependencies>
         <executions>
@@ -32,7 +34,7 @@ Use it in your `pom.xml` like this:
     </plugin>
 ```
 
-There are two configs in `checkstyle` folder and `nacre-checkstyle` folder. They only have slight differences, `nacre-checkstyle/checkstyle.xml` should only be used in groupId `io.github.shallowinggg` for configuration limit:
+There are four configs in `checkstyle` folder, including `checkstyles.xml`, `google-check.xml`, `sun_check.xml` and `nacre-check.xml`. `nacre-check.xml` is only used for shallowinggg's owning projects with configuration limit:
 
 ```xml
     <module name="PackageName">
@@ -40,6 +42,51 @@ There are two configs in `checkstyle` folder and `nacre-checkstyle` folder. They
     </module>
 ```
 
-So, you should use general config in `checkstyle` folder for your own projects.
+So, you should use other 3 general config in `checkstyle` folder for your projects.
 
-You can also use `google check` with `google-check/checkstyle.xml` or `sun check` with `sun-check/checkstyle.xml`.
+## formatter
+
+Use `formatter-maven-plugin` like this:
+
+```xml
+<properites>
+    <formatter.config>formatter/formatter.xml</formatter.config>
+
+    <formatter.version>2.12.2</formatter.version>
+</properites>
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>net.revelc.code.formatter</groupId>
+            <artifactId>formatter-maven-plugin</artifactId>
+            <dependencies>
+                <dependency>
+                    <groupId>io.github.shallowinggg</groupId>
+                    <artifactId>nacre-build</artifactId>
+                    <version>${nacre.version}</version>
+                </dependency>
+            </dependencies>
+            <configuration>
+                <configFile>${formatter.config}</configFile>
+                <skipXmlFormatting>true</skipXmlFormatting>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>format</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+```
+
+The formatter config follows google styles but have some slightly modifications in it:
+
+- org.eclipse.jdt.core.formatter.tabulation.char: tab
+- org.eclipse.jdt.core.formatter.tabulation.size : 4
+- org.eclipse.jdt.core.formatter.insert_new_line_in_empty_block: true
+
+see [eclipse-java-google-style.xml](https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml) for more information.

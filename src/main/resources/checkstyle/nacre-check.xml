@@ -19,10 +19,6 @@ limitations under the License.
         "https://checkstyle.org/dtds/configuration_1_3.dtd">
 <module name="Checker">
 
-    <module name="FileTabCharacter">
-        <property name="eachLine" value="true"/>
-    </module>
-
     <module name="FileLength">
         <property name="max" value="3000"/>
     </module>
